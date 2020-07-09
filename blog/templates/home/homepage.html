@@ -1,0 +1,144 @@
+{% load static %}
+<html>
+    <head>
+        <title>cameronwebley632.bio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="{% static 'css/home.scss' %}">
+        <link rel="icon" href="{% static 'img/logo.png' %}">
+        <script src="{% static 'js/home.js' %}"></script>
+    </head>
+    <body onload="checkCookie()">
+        <div class="crt"></div>
+        <div class="preloader" id="preloader">
+            <div class="cw_logo"><img id="cw_logo" src="{% static 'img/logoblur.png' %}"></div>
+            <div class="hacking">
+                <p>
+                    Initializing...
+                </p>
+                <p>
+                    -Loaded modules-
+                </p>
+                <p>
+                    -Loaded nodes-
+                </p>
+                <p>
+                    --INITIALIZATION COMPLETE--
+                </p>
+                <p>
+                    > connect 125.216.147.181
+                </p>
+                <p>
+                    connecting...
+                </p>
+                <p>
+                    --LOGIN REQUIRED--
+                </p>
+                <p>
+                    username: admin
+                </p>
+                <p>
+                    password: **************
+                </p>
+                <p>
+                    --CONNECTION ESTABLISHED TO 125.216.147.181--
+                </p>
+                <p>
+                    -Welcome to Vorobyov Data Bank-
+                </p>
+                <p>
+                    > cd home
+                </p>
+                <p>
+                    home/> ls
+                </p>
+                <p>
+                    :biographies<br>:financial_reports<br>:research<br>:project_x
+                <p>
+                    home/> cd biographies
+                </p>
+                <p>
+                    home/biographies/> ls | wc -l
+                </p>
+                <p>
+                    7,796,674,577
+                </p>
+                <p>
+                    home/biographies/> bio_view cameronwebley632.bio
+                </p>
+                <p>
+                    Loading...
+                </p>
+                <p>
+                    --LOADING COMPLETE--
+                </p>
+            </div>
+            <div class="vorobyov_logo"><img id="vorobyov_logo" src="{% static 'img/vorobyov.png' %}"></div>
+        </div>
+        <nav class="textflicker">
+            <a href=""><img id="logo" src="{% static 'img/logo.png' %}"></a>
+            <ul>
+            <li><a href="/blog">blog.txt</a></li>
+            <li><a href="">projects.db</a></li>
+            </ul>
+        </nav>
+        <div class="bio">
+            <div class="grid">
+                <div class="box photo"></div>
+                <div class="box forename">
+                    <div class="subgrid">
+                        <div class="attribute"><p>Forename</p></div>
+                        <div class="value"><p>Cameron</p></div>
+                    </div>
+                </div>
+                <div class="box surname">
+                    <div class="subgrid">
+                        <div class="attribute"><p>Surname</p></div>
+                        <div class="value"><p>Webley</p></div>
+                    </div>
+                </div>
+                <div class="box dob">
+                    <div class="subgrid">
+                        <div class="attribute"><p>D.O.B</p></div>
+                        <div class="value"><p>12/10/00</p></div>
+                    </div>
+                </div>
+                <div class="box gender">
+                    <div class="subgrid">
+                        <div class="attribute"><p>Gender</p></div>
+                        <div class="value"><p>Male</p></div>
+                    </div>
+                </div>
+                <div class="box blood">
+                    <div class="subgrid">
+                        <div class="attribute"><p>Blood Type</p></div>
+                        <div class="value"><p>A-</p></div>
+                    </div>
+                </div>
+                <div class="box education">
+                    <div class="subgrid">
+                        <div class="attribute"><p>Education</p></div>
+                        <div class="value"><p>University Of Birmingham</p></div>
+                    </div>
+                </div>
+                <div class="box location">
+                    <div class="subgrid">
+                        <div class="attribute"><p>Current Location</p></div>
+                        <div class="value"><p><span id="corrupt"></span></p></div>
+                    </div>
+                </div>
+                <div class="box id">
+                    <div class="subgrid">
+                        <div class="attribute"><p>Identification</p></div>
+                        <div class="value"><img id="id" src="{% static 'img/id.png' %}"></div>
+                    </div>
+                </div>
+                <div class="box neuron">
+                    <div class="subgrid">
+                        <div class="attribute"><p>Neuron Signature</p></div>
+                        <div class="value"><img id="neuron" src="{% static 'img/neuron.gif' %}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 
