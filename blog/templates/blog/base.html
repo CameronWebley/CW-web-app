@@ -1,20 +1,29 @@
 {% load static %}
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>cameronwebley.bio</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
 
     <body>
-        <div class="page-header">
-            {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% endif %}
-            <h1><a href="/blog">Django Girls Blog</a></h1>
-        </div>
+        <div class="crt"></div>
+        <nav class="textflicker">
+                <a href="/"><img id="logo" src="{% static 'img/logo.png' %}"></a>
+                <ul>
+                <li><a href="/blog">blog.txt</a></li>
+                <li><a href="/projects">projects.db</a></li>
+                {% if user.is_authenticated %}
+                <ul class="admin">
+                <li><a href="{% url 'post_new' %}">new blog post</a></li>
+                <li><a href="{% url 'project_new' %}">new project</a></li>
+                </ul>
+                {% endif %}
+                </ul>
+
+        </nav>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">

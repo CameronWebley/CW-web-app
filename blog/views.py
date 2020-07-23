@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
-from .models import Post
-from .forms import PostForm
+from .models import Post, Project
+from .forms import PostForm, ProjectForm
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -41,3 +41,38 @@ def post_edit(request, pk):
 
 def homepage(request):
     return render(request, 'home/homepage.html', {})
+
+def project_list(request):
+    projects = Project.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'projects/project_list.html', {'projects': projects})
+
+def project_detail(request, pk):
+    projects = get_object_or_404(Project, pk=pk)
+    return render(request, 'projects/project_detail.html', {'project': projects})
+
+def project_new(request):
+    if request.method == "POST":
+        form = ProjectForm(request.POST)
+        if form.is_valid():
+            project = form.save(commit=False)
+            project.author = request.user
+            project.published_date = timezone.now()
+            project.save()
+            return redirect('project_detail', pk=project.pk)
+    else:
+        form = ProjectForm()
+    return render(request, 'projects/project_edit.html', {'form': form})
+
+def project_edit(request, pk):
+    project = get_object_or_404(Project, pk=pk)
+    if request.method == "POST":
+        form = ProjectForm(request.POST, instance=project)
+        if form.is_valid():
+            project = form.save(commit=False)
+            project.author = request.user
+            project.published_date = timezone.now()
+            project.save()
+            return redirect('project_detail', pk=project.pk)
+    else:
+        form = ProjectForm(instance=project)
+    return render(request, 'projects/project_edit.html', {'form': form})

@@ -555,7 +555,6 @@ ul {
 
 li {
     display: inline-block;
-    font-size: 22px;
     padding: 0 25px 0 25px;
     font-size: 25px;
     font-family: monospace;
@@ -565,8 +564,8 @@ li {
     height: 80px;
     width: 80px;
     position: absolute;
-    top: 10;
-    left:10;
+    top: 10px;
+    left: 10px;
 }
 
 /* Grid Rules */
@@ -590,12 +589,12 @@ li {
 
 .photo {
     grid-area: 1 / 1 / span 3 / span 3;
-    background-image: url(../img/jc.jpeg);
+    background-image: url(../img/photo.jpg);
     background-size: cover;
 }
 
 .photo:hover {
-    background-image: url(../img/JC2.jpg);
+    background-image: url(../img/spin.gif);
 }
 
 .forename {

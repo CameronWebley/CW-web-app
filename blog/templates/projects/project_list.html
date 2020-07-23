@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for project in projects %}
+        <div class="post">
+            <div class="date">
+                {{ project.published_date }}
+            </div>
+            <h2><a href="{% url 'project_detail' pk=project.pk %}">{{ project.title }}</a></h2>
+            <h3><a href="{{ project.link }}">Project Link</a></h3>
+            <p>{{ project.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}s
