@@ -7,102 +7,6 @@ body {
     background-size: cover;
 }
 
-
-.crt::before {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%), linear-gradient(90deg, rgba(255,0,0,0.06), rgba(0,255, 0, 0.02), rgba(0,0,255,0.06));
-    z-index: 1000;
-    background-size: 100% 2px, 3px 100%;
-    pointer-events: none;
-}
-
-@keyframes flicker {
-    0% {
-    opacity: 0.27861;
-    }
-    5% {
-    opacity: 0.34769;
-    }
-    10% {
-    opacity: 0.23604;
-    }
-    15% {
-    opacity: 0.90626;
-    }
-    20% {
-    opacity: 0.18128;
-    }
-    25% {
-    opacity: 0.83891;
-    }
-    30% {
-    opacity: 0.65583;
-    }
-    35% {
-    opacity: 0.67807;
-    }
-    40% {
-    opacity: 0.26559;
-    }
-    45% {
-    opacity: 0.84693;
-    }
-    50% {
-    opacity: 0.96019;
-    }
-    55% {
-    opacity: 0.08594;
-    }
-    60% {
-    opacity: 0.20313;
-    }
-    65% {
-    opacity: 0.71988;
-    }
-    70% {
-    opacity: 0.53455;
-    }
-    75% {
-    opacity: 0.37288;
-    }
-    80% {
-    opacity: 0.71428;
-    }
-    85% {
-    opacity: 0.70419;
-    }
-    90% {
-    opacity: 0.7003;
-    }
-    95% {
-    opacity: 0.36108;
-    }
-    100% {
-    opacity: 0.24387;
-    }
-}
-  
-.crt::after {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(18, 16, 16, 0.1);
-    opacity: 0;
-    z-index: 1000;
-    pointer-events: none;
-    animation: flicker 0.15s infinite;
-}
-
 @keyframes textShadow {
     0% {
       text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 1px;
@@ -180,295 +84,8 @@ body {
     background-color: black;
     z-index: 600;
     animation: fadeout 2s forwards;
-    animation-delay: 40s;
-    pointer-events: none;
-}
-
-.hacking {
-    animation: fadeout 0s forwards;
-    animation-delay: 35s;
-}
-
-.hacking p{
-    z-index: 700;
-    color: white;
-    border-right: .15em solid red;
-    font-family: "monospace";
-    font-size: 18px;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.hacking p:nth-child(1) {
-    width: 15ch;
-    opacity: 0;
-    -webkit-animation: type_noborder 1s steps(15, end);
-    animation: type_noborder 1s steps(15, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
     animation-delay: 5s;
-}
-
-.hacking p:nth-child(2) {
-    width: 16ch;
-    opacity: 0;
-    -webkit-animation: type_noborder 1s steps(1, end);
-    animation: type_noborder 1s steps(1, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 6.5s;
-}
-
-.hacking p:nth-child(3) {
-    width: 14ch;
-    opacity: 0;
-    -webkit-animation: type_noborder 1s steps(1, end);
-    animation: type_noborder 1s steps(1, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 8s;
-}
-
-.hacking p:nth-child(4) {
-    width: 27ch;
-    opacity: 0;
-    -webkit-animation: type_noborder 1s steps(1, end);
-    animation: type_noborder 1s steps(1, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 9.5s;
-}
-
-.hacking p:nth-child(5) {
-    width: 24ch;
-    opacity: 0;
-    -webkit-animation: type 1s steps(24, end);
-    animation: type 1s steps(24, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 11s;
-}
-
-.hacking p:nth-child(6) {
-    width: 13ch;
-    opacity: 0;
-    -webkit-animation: type_noborder 1s steps(13, end);
-    animation: type_noborder 1s steps(13, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 12.5s;
-}
-
-.hacking p:nth-child(7) {
-    width: 18ch;
-    opacity: 0;
-    -webkit-animation: type_noborder 1s steps(1, end);
-    animation: type_noborder 1s steps(1, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 14s;
-}
-
-.hacking p:nth-child(8) {
-    width: 15ch;
-    opacity: 0;
-    -webkit-animation: type 1s steps(15, end);
-    animation: type 1s steps(15, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 15.5s;
-}
-
-.hacking p:nth-child(9) {
-    width: 24ch;
-    opacity: 0;
-    -webkit-animation: type 1s steps(24, end);
-    animation: type 1s steps(24, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 17s;
-}
-
-.hacking p:nth-child(10) {
-    width: 45ch;
-    opacity: 0;
-    -webkit-animation: type_noborder 1s steps(1, end);
-    animation: type_noborder 1s steps(1, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 18.5s;
-}
-
-.hacking p:nth-child(11) {
-    width: 31ch;
-    opacity: 0;
-    -webkit-animation: type_noborder 1s steps(1, end);
-    animation: type_noborder 1s steps(1, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 20s;
-}
-
-.hacking p:nth-child(12) {
-    width: 9ch;
-    opacity: 0;
-    -webkit-animation: type 1s steps(9, end);
-    animation: type 1s steps(9, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 21.5s;
-}
-
-.hacking p:nth-child(13) {
-    width: 9ch;
-    opacity: 0;
-    -webkit-animation: type 1s steps(9, end);
-    animation: type 1s steps(9, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 23s;
-}
-
-.hacking p:nth-child(14) {
-    width: 45ch;
-    opacity: 0;
-    -webkit-animation: type_noborder 0s steps(1, end);
-    animation: type_noborder 0s steps(1, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 24.5s;
-}
-
-.hacking p:nth-child(15) {
-    width: 21ch;
-    opacity: 0;
-    -webkit-animation: type 1s steps(21, end);
-    animation: type 1s steps(21, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 26s;
-}
-
-.hacking p:nth-child(16) {
-    width: 29ch;
-    opacity: 0;
-    -webkit-animation: type 1s steps(29, end);
-    animation: type 1s steps(29, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 27.5s;
-}
-
-.hacking p:nth-child(17) {
-    width: 13ch;
-    opacity: 0;
-    -webkit-animation: type_noborder 0s steps(1, end);
-    animation: type_noborder 0s steps(1, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 29s;
-}
-
-.hacking p:nth-child(18) {
-    width: 50ch;
-    opacity: 0;
-    -webkit-animation: type 1s steps(50, end);
-    animation: type 1s steps(50, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 30.5s;
-}
-
-.hacking p:nth-child(19) {
-    width: 10ch;
-    opacity: 0;
-    -webkit-animation: type 1s steps(10, end);
-    animation: type 1s steps(10, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 32s;
-}
-
-.hacking p:nth-child(20) {
-    width: 20ch;
-    opacity: 0;
-    -webkit-animation: type_noborder 0s steps(1, end);
-    animation: type_noborder 0s steps(1, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 33.5s;
-}
-
-@keyframes type {
-    0% {
-        width: 0;
-        border-right: transparent;
-    }
-    0.1%{
-        opacity: 1;
-        border-right: .15em solid red;
-    }
-    99.9% {
-        border-right: .15em solid red;
-    }
-    100% {
-        opacity: 1;
-        border: none;
-    }
-}
-
-@keyframes type_noborder {
-    0% {
-        width: 0;
-        border-right: transparent;
-    }
-    0.1%{
-        opacity: 1;
-        border-right: .15em solid transparent;
-    }
-    99.9% {
-        border-right: .15em solid transparent;
-    }
-    100% {
-        opacity: 1;
-        border: none;
-    }
-}
-  
-@-webkit-keyframes type {
-    0% {
-        width: 0;
-        border-right: transparent;
-    }
-    0.1% {
-        opacity: 1;
-        border-right: .15em solid red;
-    }
-    99.9% {
-        border-right: .15em solid red;
-    }
-    100% {
-        opacity: 1;
-        border: none;
-    }
-}
-
-@-webkit-keyframes type_noborder {
-    0% {
-        width: 0;
-        border-right: transparent;
-    }
-    0.1% {
-        opacity: 1;
-        border-right: .15em solid transparent;
-    }
-    99.9% {
-        border-right: .15em solid transparent;
-    }
-    100% {
-        opacity: 1;
-        border: none;
-    }
+    pointer-events: none;
 }
 
 .cw_logo {
@@ -482,27 +99,11 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.vorobyov_logo {
-    position: absolute;
-    width: 1000px;
-    height: 625px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 #cw_logo {
     opacity: 0;
     animation: fadein 2s forwards;
     animation-delay: 0.8s;
 }
-
-#vorobyov_logo {
-    opacity: 0;
-    animation: fadein 2s forwards;
-    animation-delay: 35s;
-}
-
 
 @keyframes fadeout {
     0% { opacity: 1;}
@@ -557,7 +158,7 @@ li {
     display: inline-block;
     padding: 0 25px 0 25px;
     font-size: 25px;
-    font-family: monospace;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 #logo {
@@ -630,7 +231,7 @@ li {
 }
 
 .location .value p:after {
-    content: "w̪͕͎̜̓́͒̀͢͝t͉̱̀͌̃ͅĢ̻̳͈͋͂̓̓ẘ̪8̢̩͌̀g͓̍5̘̫̼̩͑͒͘̚b̕l̛͔͍̙͛͂g̪̽3̙̤̦͊̊͢͝͞n2";
+    content: "ueAYm8xHnQ7wb";
 }
 
 .location .value span:after {
@@ -696,40 +297,40 @@ li {
 
 @keyframes cipher-animate {
     0% {
-        content: "w̪͕͎̜̓́͒̀͢͝t͉̱̀͌̃ͅĢ̻̳͈͋͂̓̓ẘ̪8̢̩͌̀g͓̍5̘̫̼̩͑͒͘̚b̕l̛͔͍̙͛͂g̪̽3̙̤̦͊̊͢͝͞n2";
+        content: "eAYm8xHnQ7wb2";
     }
     8% {
-        content: "t͉̱̀͌̃ͅĢ̻̳͈͋͂̓̓ẘ̪8̢̩͌̀g͓̍5̘̫̼̩͑͒͘̚b̕l̛͔͍̙͛͂g̪̽3̙̤̦͊̊͢͝͞n2";
+        content: "AYm8xHnQ7wb2";
     }
     16% {
-        content: "Ģ̻̳͈͋͂̓̓ẘ̪8̢̩͌̀g͓̍5̘̫̼̩͑͒͘̚b̕l̛͔͍̙͛͂g̪̽3̙̤̦͊̊͢͝͞n2";
+        content: "Ym8xHnQ7wb2";
     }
     24% {
-        content: "ẘ̪8̢̩͌̀g͓̍5̘̫̼̩͑͒͘̚b̕l̛͔͍̙͛͂g̪̽3̙̤̦͊̊͢͝͞n2";
+        content: "m8xHnQ7wb2";
     }
     32% {
-        content: "8̢̩͌̀g͓̍5̘̫̼̩͑͒͘̚b̕l̛͔͍̙͛͂g̪̽3̙̤̦͊̊͢͝͞n2";
+        content: "8xHnQ7wb2";
     }
     40% {
-        content: "g͓̍5̘̫̼̩͑͒͘̚b̕l̛͔͍̙͛͂g̪̽3̙̤̦͊̊͢͝͞n2";
+        content: "xHnQ7wb2";
     }
     48% {
-        content: "5̘̫̼̩͑͒͘̚b̕l̛͔͍̙͛͂g̪̽3̙̤̦͊̊͢͝͞n2";
+        content: "HnQ7wb2";
     }
     56% {
-        content: "b̕l̛͔͍̙͛͂g̪̽3̙̤̦͊̊͢͝͞n2";
+        content: "nQ7wb2";
     }
     64% {
-        content: "l̛͔͍̙͛͂g̪̽3̙̤̦͊̊͢͝͞n2";
+        content: "Q7wb2";
     }
     72% {
-        content: "g̪̽3̙̤̦͊̊͢͝͞n2";
+        content: "7wb2";
     }
     80% {
-        content: "3̙̤̦͊̊͢͝͞n2";
+        content: "wb2";
     }
     88% {
-        content: "n2";
+        content: "b2";
     }
     96% {
         content: "2";
@@ -806,5 +407,5 @@ li {
 .value {
     grid-area: 2 / 1 / span 2 / 1;
     background-color: rgb(78, 78, 78);
-    font-family: 'Nova Mono', monospace;
+    font-family: 'Nova Flat', cursive;
 }
