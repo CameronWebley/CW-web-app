@@ -198,6 +198,10 @@ li {
     background-image: url(../img/spin.gif);
 }
 
+.photo:active {
+    background-image: url(../img/spin.gif);
+}
+
 .forename {
     grid-area: 1 / 4 / span 1 / span 3;
 }
@@ -242,7 +246,15 @@ li {
     animation: cipher-animate forwards 1s;
 }
 
+.location:active .value p:after {
+    animation: cipher-animate forwards 1s;
+}
+
 .location:hover .value span:after {
+    animation: corrupt-animate forwards 1s;
+}
+
+.location:active .value span:after {
     animation: corrupt-animate forwards 1s;
 }
 
